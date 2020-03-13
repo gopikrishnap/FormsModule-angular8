@@ -1,0 +1,16 @@
+<!-- <h1 *ngIf="Ngifveriable; else NoNgIF" > Ng if  is created a {{TestMsg}}</h1> -->
+
+
+<!-- <ng-template #NoNgIF>
+<h2>No ng if</h2>
+</ng-template> -->
+
+
+<input type="text" [(ngModel)]="NgModel">
+<BUtton class="btn btn-primary" (click)="OnclckServer()">  server</BUtton>
+<h1 *ngIf="Ngifveriable" > Ng if  is created a {{TestMsg}} text</h1>
+
+
+<!-- Ng For   code -->
+
+<p *ngFor="let server of servers" style="background: red;">Test data {{servers}}</p>

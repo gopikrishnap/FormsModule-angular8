@@ -1,0 +1,40 @@
+<!-- <H1 *ngIf="ngif"> Nf for and Ng If</H1>
+
+<div *ngFor="let data of datamain; index as i">
+    
+<h3> {{i}}   {{data}}</h3>
+</div> -->
+
+
+<!-- <div [ngSwitch]="color">
+<div *ngSwitchCase="'red'">red</div>
+<div *ngSwitchCase="'blue'">blue</div>
+</div> -->
+
+<!-- ng if code start -->
+<button (click)="Ngiffunction()">Ng_If button</button>
+<div>
+    <h3 *ngIf="NgIfShow; else elseBlock">Ng Text to show</h3>
+</div>
+<ng-template #elseBlock>Ng Text to Is hidden</ng-template>
+<!-- ng if code end -->
+
+<!-- ng for code start -->
+<input type="text" class="form-control" style="margin-top: 10px;"  [(ngModel)]="NgModel">
+
+<button (click)="NgForfunction()" style="margin-right: 10px;">Ng_for button</button>
+<button (click)="NgForfunctionReset()">Ng_for Reset</button>
+<ul>
+    <h1 *ngFor="let user of users">{{ user.name }}</h1>
+</ul>
+
+<!-- ng for code end -->
+<!-- ng switch code start -->
+
+<div [ngSwitch]="color">
+<div *ngSwitchCase="'red'"> your color is red</div>
+<div  *ngSwitchCase="'blue'">your color is blue</div>
+<div  *ngSwitchCase="'yellow'">your color is yellow</div>
+<div  *ngSwitchDefault>No color</div>
+</div>
+<!-- ng switch code end -->

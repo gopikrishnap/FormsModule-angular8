@@ -1,0 +1,9 @@
+<!-- 
+    
+ -->
+
+ <ul>
+     <li *ngFor ="let school of schools" (click)="selectSchool(schools)">
+        <button class="btn btn-primary"> {{school.SchoolRank}} {{school.schoolName}}</button>
+     </li>
+ </ul>

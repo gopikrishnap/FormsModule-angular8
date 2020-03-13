@@ -1,0 +1,31 @@
+<form class="col-sm-6 col-sm-offset-3" [formGroup]="sigupForm" (ngSubmit)="ReactiveFormSubmit()">
+  <div formGroupName="UserData">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" placeholder="Email" formControlName="Email">
+      <span *ngIf="!sigupForm.get('UserData.Email').valid && sigupForm.get('UserData.Email').touched "
+        class="help-block">Please Enter Email Id</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" placeholder="Password" formControlName="Password">
+      <span *ngIf="!sigupForm.get('UserData.Password').valid && sigupForm.get('UserData.Password').touched "
+        class="help-block">Please Enter Password</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Mobile Number</label>
+      <input type="number" class="form-control" placeholder="Mobile" formControlName="MobileNumber">
+      <span *ngIf="!sigupForm.get('UserData.MobileNumber').valid && sigupForm.get('UserData.MobileNumber').touched "
+        class="help-block">Please Enter Mobile Number</span>
+    </div>
+  </div>
+  <div formArrayName="hobbies">
+    <button class="btn btn-default" type="button" (click)="Hobbies()">Details</button>
+    <div class="form-group">
+      <input type="text" class="form-control"
+        *ngFor="let hobbiescontroll of this.sigupForm.get('hobbies').controls ; let i=index" [formControlName]="i">
+      <!-- <span *ngIf="!sigupForm.get('UserData.MobileNumber').valid && sigupForm.get('UserData.MobileNumber').touched " class="help-block">Please Enter Mobile Number</span> -->
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

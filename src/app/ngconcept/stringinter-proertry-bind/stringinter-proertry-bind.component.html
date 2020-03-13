@@ -1,0 +1,21 @@
+<!-- <p>{{StringBind}} the stringinter-proertry-bind {{StringData}}</p> -->
+<p [innerText]="allowNewbuttondisableneable"></p>
+<label for="">Input event</label>
+<input type="text" class="form-control" (input)="UpdateInput($event)">
+<h3>{{UpdateEvent}}</h3>
+
+<button class="btn btn-primary" [disabled]="allowNewbuttondisableneable" (click)="OnCreateMetho($event)">Proprtty
+    Binding </button>
+<p>{{Prpertychange}}</p>
+
+
+<!-- //validation and enable and disable and rest value start-->
+
+<label for="">Enable/disable/reset</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<button class="btn btn-primary" style="margin-top: 10px;" [disabled]="username ===''"
+    (click)="username=''">Enable/disable/reset</button>
+<h1 style="margin-top: 10px;">
+    {{username}}
+</h1>
+<!-- //validation and enable and disable and rest value start-->
