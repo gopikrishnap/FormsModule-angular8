@@ -11,3 +11,5 @@
     color: white;
     /* box-shadow: 5px 10px 8px #888888; */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

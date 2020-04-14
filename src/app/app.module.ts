@@ -17,11 +17,13 @@ import { PipesallPipe } from './pipesall.pipe';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { NgconceptComponent } from './ngconcept/ngconcept.component';
 import { LeadinfoDetailsComponent } from './leadinfo-details/leadinfo-details.component';
-
+import{AngularMaterialModule} from './angular-material/angular-material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsvalidationsComponent } from './formsvalidations/formsvalidations.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'TemplateDrivenFormsComponent', pathMatch: 'full' },
+  { path: '', redirectTo: 'leadinfo', pathMatch: 'full' },
   { path: 'ReactiveForms', component: ReactiveFormsComponent },
   { path: 'TemplateDrivenFormsComponent', component: TemplateDrivenFormsComponent },
   {
@@ -36,6 +38,7 @@ const routes: Routes = [
     loadChildren: () => import('./ngconcept/ngconcept.module').then(m => m.NgconceptModule)
   },
   {path:'leadinfo',component:LeadinfoDetailsComponent},
+  {path:'formsvalidations',component:FormsvalidationsComponent},
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -54,13 +57,17 @@ const routes: Routes = [
     SearchMovieComponent,
     NgconceptComponent,
     LeadinfoDetailsComponent,
-  ],
+    FormsvalidationsComponent
+    ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+     AngularMaterialModule,
+    BrowserAnimationsModule,
+    // MatButtonModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

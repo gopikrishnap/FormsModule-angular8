@@ -1,1 +1,87 @@
-<p>leadinfo-details works!</p>
+<form class="col-sm-4 col-sm-offset-3" (ngSubmit)="onSubmitForm(form)" #form="ngForm">
+    <div class="form-group">
+        <label for="">Full Name </label>
+        <input type="text" class="form-control" placeholder="Enter Your Fukl Name" required
+            [(ngModel)]="LeadData.FullName" #Fullname="ngModel" name="Fullname">
+        <p *ngIf="!Fullname.valid && Fullname.touched " class="error">Please Enter Full Name</p>
+    </div>
+    <div class="form-group">
+        <label for="">Mobile Number </label>
+        <input type="number" class="form-control" placeholder="Enter Your Full Name" required
+            [(ngModel)]="LeadData.MobileNumber" #MobileNumber="ngModel" name="MobileNumber">
+        <p *ngIf="!MobileNumber.valid && MobileNumber.touched " class="error">Please Enter Mobile Number</p>
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <select class="form-control" placeholder="Select Your Gender" [(ngModel)]="LeadData.Mgender" name="gender"
+            required #gender="ngModel" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let gender of genders" [value]="gender.Gender">{{gender.Gender}}</option>
+        </select>
+        <p>{{LeadData.Mgender }} -selected</p>
+        <p *ngIf="!gender.valid && gender.touched">Please select Gender</p>
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="LeadData.Dob" name="Dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label>Occupation</label>
+        <select class="form-control" placeholder="Select Your Occupation" [(ngModel)]="LeadData.Occupation"
+           required #Occupation="ngModel" name="Occupation" [ngModelOptions]="{standalone: true}"> 
+            <option *ngFor="let Occupationlist  of OccupationsList" [value]="Occupationlist">{{Occupationlist}}</option>
+        </select>
+        <p>{{LeadData.Occupation}} -selected</p>
+        <p *ngIf="!Occupation.valid && Occupation.touched">Please select Occupation</p>
+    </div>
+    <div class="form-group">
+        <label>Income</label>
+        <select class="form-control" placeholder="Select Your Income" [(ngModel)]="LeadData.Income"
+            required #IncomeListng="ngModel" name="IncomeListng" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let IncomeList of IncomesList" [value]="IncomeList.income">{{IncomeList.income}}</option>
+        </select>
+        <p>{{LeadData.Income}}</p>
+        <p *ngIf="!IncomeListng.valid && IncomeListng.touched">Please select Income</p>
+    </div>
+    <div class="form-group">
+        <label for="">Age</label>
+        <input name="age" id="" type="number" class="form-control" placeholder="Enter Your Age" required
+            [(ngModel)]="LeadData.age" #age="ngModel">
+        <p *ngIf="!age.valid && age.touched" class="error">Please Enter Age</p>
+    </div>
+    <div class="form-group">
+        <label for="">Address</label>
+        <textarea name="Addresslist" id="" cols="2" rows="4" class="form-control" placeholder="Enter Your Address" required
+            [(ngModel)]="LeadData.Address" #Addresslist="ngModel"></textarea>
+        <p *ngIf="!Addresslist.valid && Addresslist.touched" class="error">Please Enter Address</p>
+    </div>
+    <div class="form-group">
+        <label for="">Address one </label>
+        <textarea name="Addresslist1" id="" cols="2" rows="4" class="form-control" placeholder="Enter Your Address" required
+            [(ngModel)]="LeadData.Address1" #Addresslist1="ngModel"></textarea>
+        <p *ngIf="!Addresslist1.valid && Addresslist1.touched" class="error">Please Enter Address1</p>
+    </div>
+    <div class="form-group">
+        <label for="">Address two</label>
+        <textarea name="Addresslist2" id="" cols="2" rows="4" class="form-control" placeholder="Enter Your Address" required
+            [(ngModel)]="LeadData.Address2" #Addresslist2="ngModel"></textarea>
+        <p *ngIf="!Addresslist2.valid && Addresslist2.touched" class="error">Please Enter Address2</p>
+    </div>
+
+    <div class="form-group">
+        <label for="">Pan Card Number</label>
+        <input name="PanCard" id="" type="text" class="form-control" placeholder="Enter Your Pan Number" required
+            [(ngModel)]="LeadData.PanCard" #PanCard="ngModel">
+        <p *ngIf="!PanCard.valid && PanCard.touched" class="error">Please Enter Pan Number</p>
+    </div>
+    <div class="form-group">
+        <label for="">Aadhar Number</label>
+        <input name="AadharNumber" id="" type="number" class="form-control" placeholder="Enter Your Aadhar Number"
+            required [(ngModel)]="LeadData.AadharNumber" #AadharNumber="ngModel">
+        <p *ngIf="!AadharNumber.valid && AadharNumber.touched" class="error">Please Enter Aadhar Number</p>
+    </div>
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

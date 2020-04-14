@@ -43,6 +43,6 @@
       <input type="email" class="form-control"  pattern="^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])" placeholder="Enter Your Email ID" required [(ngModel)]="UserData.email" name="email" #email="ngModel">
       <p *ngIf="!email.valid && email.touched">Please Enter Your Email-Id</p>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
-    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
