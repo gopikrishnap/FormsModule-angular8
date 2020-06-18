@@ -20,6 +20,7 @@ import { LeadinfoDetailsComponent } from './leadinfo-details/leadinfo-details.co
 import{AngularMaterialModule} from './angular-material/angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsvalidationsComponent } from './formsvalidations/formsvalidations.component';
+import { NestedFormgroupComponent } from './nested-formgroup/nested-formgroup.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   },
   {path:'leadinfo',component:LeadinfoDetailsComponent},
   {path:'formsvalidations',component:FormsvalidationsComponent},
+  {path:'NestedForm',component:NestedFormgroupComponent},
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -57,7 +59,8 @@ const routes: Routes = [
     SearchMovieComponent,
     NgconceptComponent,
     LeadinfoDetailsComponent,
-    FormsvalidationsComponent
+    FormsvalidationsComponent,
+    NestedFormgroupComponent
     ],
   imports: [
     BrowserModule,
