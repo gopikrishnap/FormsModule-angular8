@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgIfForComponent } from './ng-if-for.component';
+import { SalesdriveComponent } from './salesdrive.component';
 
-describe('NgIfForComponent', () => {
-  let component: NgIfForComponent;
-  let fixture: ComponentFixture<NgIfForComponent>;
+describe('SalesdriveComponent', () => {
+  let component: SalesdriveComponent;
+  let fixture: ComponentFixture<SalesdriveComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgIfForComponent ]
+      declarations: [ SalesdriveComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgIfForComponent);
+    fixture = TestBed.createComponent(SalesdriveComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

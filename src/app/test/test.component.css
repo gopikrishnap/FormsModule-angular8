@@ -1,0 +1,49 @@
+.text-color-white {
+  color: #ffffff;
+}
+.text-color-black {
+  color: #000000;
+  }
+.text-color-light-1 {
+  color: #767676;
+}
+.text-color-medium {
+  color: #9e9e9e;
+}
+.text-color-dark-medium {
+  color: #3c3d3d;
+}
+
+.text-color-MobileNumber {
+  color: #919699;
+}
+
+.text-color-MobileName {
+  color: #152f38;
+}
+
+.text-color-lightblue {
+  color: #4285f4;
+}
+
+.text-font-size-9 {
+  font-size: 9px;
+}
+.text-font-size-10 {
+  font-size: 10px;
+}
+.text-font-size-11 {
+  font-size: 11px;
+}
+.text-font-size-12 {
+  font-size: 12px;
+}
+.text-font-size-13 {
+  font-size: 13px;
+}
+.text-font-size-14 {
+  font-size: 14px;
+}
+.text-font-size-15 {
+  font-size: 15px;
+}

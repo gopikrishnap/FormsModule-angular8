@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+
+        <input type="text" [(ngModel)]="mytest.id" (change)="removeQuantity()">
+        
+        <div *ngFor="let item of items; let i=index" 
+        style="padding: 14px;
+        border: 1px solid;" id="myid">
+            {{item}}
+            <button (click)="remove(i)">click</button>
+        </div>
+        <div>
+            {{this.mytest.id}}
+        </div>
+    </div>
+
+</div>

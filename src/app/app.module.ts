@@ -21,10 +21,13 @@ import{AngularMaterialModule} from './angular-material/angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsvalidationsComponent } from './formsvalidations/formsvalidations.component';
 import { NestedFormgroupComponent } from './nested-formgroup/nested-formgroup.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { SalesdriveComponent } from './salesdrive/salesdrive.component';
+import { TestComponent } from './test/test.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'leadinfo', pathMatch: 'full' },
+  { path: '', redirectTo: 'salesdrive', pathMatch: 'full' },
   { path: 'ReactiveForms', component: ReactiveFormsComponent },
   { path: 'TemplateDrivenFormsComponent', component: TemplateDrivenFormsComponent },
   {
@@ -41,6 +44,9 @@ const routes: Routes = [
   {path:'leadinfo',component:LeadinfoDetailsComponent},
   {path:'formsvalidations',component:FormsvalidationsComponent},
   {path:'NestedForm',component:NestedFormgroupComponent},
+  {path:'bootstrap',component:BootstrapComponent},
+  {path:'salesdrive',component:SalesdriveComponent},
+  {path:'mytest',component:TestComponent},
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -60,7 +66,10 @@ const routes: Routes = [
     NgconceptComponent,
     LeadinfoDetailsComponent,
     FormsvalidationsComponent,
-    NestedFormgroupComponent
+    NestedFormgroupComponent,
+    BootstrapComponent,
+    SalesdriveComponent,
+    TestComponent
     ],
   imports: [
     BrowserModule,

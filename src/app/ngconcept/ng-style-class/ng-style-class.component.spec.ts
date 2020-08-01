@@ -23,3 +23,28 @@ describe('NgStyleClassComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+//[,,"10:30am","11:00am","11:30am"]
+//["Call Aayush sharma",,,,]
+// [
+//   {
+//     "calltimes": "9:30am",
+//     "PersonsNames": "Call Aayush sharma"
+//   },
+//    {
+//     "calltimes": "10:00am",
+//     "PersonsNames": "Mail Badal Goswami"
+//   },
+//    {
+//     "calltimes": "10:30am",
+//     "PersonsNames": "WhatsApp SMS Chirag Kulkarni"
+//   },
+//    {
+//     "calltimes": "11:00am",
+//     "PersonsNames": "SMS Divyansh Mahajan"
+//   },
+//    {
+//     "calltimes": "11:30am",
+//     "PersonsNames": "WhatsApp Call Chirag Kulkarni"
+//   },
+  
+// ]
